@@ -10,6 +10,7 @@ const link = 'http://localhost:3000'
 function tweetsPage() {
 
     const [tweetsData, setTweetsData] = useState([])
+    const [trigger, setTrigger] = useState(false) //ce trigger à pour vocation de mettre à jour la page à chaque ajout de tweet
 
     useEffect(() => {
         fetch(`${link}/tweets`)
@@ -17,9 +18,11 @@ function tweetsPage() {
             .then(data => {
                 setTweetsData(data);
             })
-    }, [])
+    }, [trigger])
 
-    console.log('tweetsData: ', tweetsData)
+    function changeTrigger() {
+        setTrigger(!trigger);
+    }
 
     const tweets = tweetsData.map((data, i) => {
         return <Tweet key={i} {...data} />;
@@ -31,8 +34,10 @@ function tweetsPage() {
                 <UserSidebar />
             </div>
             <div className={styles.center}>
-                <Tweetbar />
-                {tweets}
+                <Tweetbar changeTrigger={changeTrigger} />
+                <div className={styles.tweets}>
+                    {tweets}
+                </div>
             </div>
             <div className={styles.sidebarright}></div>
         </div >

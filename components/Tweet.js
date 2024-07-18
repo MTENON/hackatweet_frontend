@@ -14,7 +14,7 @@ function Tweet(props) {
                         height={40}
                     />
                 </div>
-                <p>{props.firstname} {props.username} - timershit</p>
+                <p>{props.firstname} <span className={styles.username}>@{props.username}</span> - timershit</p>
             </div>
             <p>{props.content}</p>
         </div>

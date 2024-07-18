@@ -8,31 +8,30 @@ import { useSelector } from 'react-redux';
 
 const link = 'http://localhost:3000'
 
-function Tweetbar() {
+function Tweetbar(props) {
 
 
     const [newTweet, setNewTweet] = useState('')
     const pattern = /\B(\#[a-zA-Z]+\b)(?!;)/gm
+    const userToken = useSelector((state) => state.user.token);
 
     function handleCawButton() {
         //Récupère tous les hashtags
-        const hashtags = newTweet.match(pattern)
+        const hashtags = newTweet.match(pattern);
 
         fetch(`${link}/tweets/newTweet`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 content: newTweet,
-                token: useSelector((state) => state.user.token),
+                token: userToken,
                 hashtags: hashtags
             })
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data)
-            })
+        }).then(response => response.json())
+            .then(() => { })
 
         setNewTweet('')
+        props.changeTrigger();
     }
 
     return (

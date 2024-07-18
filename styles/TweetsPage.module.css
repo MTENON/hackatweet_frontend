@@ -21,6 +21,12 @@
     align-items: center;
 }
 
+.tweets {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+}
+
 .sidebarright {
     width: 25%;
     height: 100%;
