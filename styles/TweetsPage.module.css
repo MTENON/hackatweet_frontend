@@ -1,0 +1,29 @@
+.main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.sidebarleft {
+    width: 20%;
+    height: 100%;
+    background-color: black;
+    border-right: 0.5px solid gray;
+}
+
+.center {
+    width: 55%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.sidebarright {
+    width: 25%;
+    height: 100%;
+    background-color: black;
+    border-left: 0.5px solid gray;
+}

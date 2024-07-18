@@ -1,0 +1,22 @@
+.tweetbar {
+    width: 99%;
+    height: 20%;
+    padding: 0 20px;
+    border-bottom: 0.5px solid grey;
+}
+
+.tweetbarTitle {
+    color: whitesmoke
+}
+
+.tweetbarInput {
+    height: 40px;
+    width: 80%;
+    color: whitesmoke;
+    background-color: black;
+    border-bottom: 0.5px solid grey;
+}
+
+.text {
+    color: whitesmoke;
+}
