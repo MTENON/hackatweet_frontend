@@ -10,11 +10,11 @@ function Tweetbar() {
     return (
         <div className={styles.tweetbar}>
             <h2 className={styles.tweetbarTitle}>HOME</h2>
-            <div>
+            <div className={styles.searchContainer}>
                 <input className={styles.tweetbarInput} placeholder={`What's up?`} onChange={(e) => newTweet.length < 280 ? setNewTweet(e.target.value) : {}}></input>
                 <div className={styles.lengthAndCaw}>
                     <p className={styles.text}>{newTweet.length}/280</p>
-                    <button >CAW</button>
+                    <button className={styles.cawButton}>CAW</button>
                 </div>
             </div>
         </div>

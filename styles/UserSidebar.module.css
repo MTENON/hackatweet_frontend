@@ -39,7 +39,7 @@
     border-radius: 20px;
     color: white;
     border: 1px solid white;
-    background-color: darkslateblue;
+    background-color: black;
     transition: all 0.5s;
     cursor: pointer;
     margin-top: 5px;
@@ -49,4 +49,8 @@
     color: darkslateblue;
     border: 1px solid darkslateblue;
     background-color: whitesmoke;
+}
+
+.userInfo {
+    color: whitesmoke;
 }

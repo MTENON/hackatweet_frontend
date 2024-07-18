@@ -42,8 +42,8 @@ function UserSidebar() {
                         />
                     </div>
                     <div id='usertext'>
-                        <p>{user.firstname}</p>
-                        <p>@{user.username}</p></div>
+                        <p className={styles.userInfo}>{user.firstname}</p>
+                        <p className={styles.userInfo}>@{user.username}</p></div>
                 </div>
                 <button className={styles.logoutbutton} onClick={() => handleLogoutButton()}>Logout</button>
             </div>
