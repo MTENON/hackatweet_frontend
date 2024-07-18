@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    firstname: 'John Cena',
-    username: 'theTimeIsNow',
-    token: null,
+    firstname: 'Maxime',
+    username: 'maximetenon',
+    token: 'N-7bQJkhjOODJ7M3xV1hX6qgcuCmNA8J',
 };
 
 export const userSlice = createSlice({

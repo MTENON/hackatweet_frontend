@@ -6,7 +6,7 @@ function Home() {
     <div>
       <main className={styles.main}>
         <h1 className={styles.title}>
-          <Link href='tweets'>TWEETS PAGE</Link>
+          <Link href='tweetsPage'>TWEETS PAGE</Link>
         </h1>
       </main>
     </div>

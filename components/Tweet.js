@@ -1,7 +1,7 @@
 import styles from '../styles/Tweet.module.css'
 import Image from 'next/Image'
 
-function Tweet() {
+function Tweet(props) {
 
     return (
         <div className={styles.tweet}>
@@ -14,9 +14,9 @@ function Tweet() {
                         height={40}
                     />
                 </div>
-                <p>firstname username - timershit</p>
+                <p>{props.firstname} {props.username} - timershit</p>
             </div>
-            <p>content</p>
+            <p>{props.content}</p>
         </div>
     )
 }
