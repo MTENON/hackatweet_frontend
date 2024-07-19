@@ -15,6 +15,8 @@ function UserSidebar() {
         username: useSelector((state) => state.user.username)
     }
 
+    console.log(user)
+
     function handleLogoutButton() {
         console.log('handleLogoutButton')
         dispatch(logout());

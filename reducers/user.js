@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
     firstname: 'Maxime',
     username: 'maximetenon',
-    token: 'N-7bQJkhjOODJ7M3xV1hX6qgcuCmNA8J',
+    token: '5_FFFhdNEh5HJnLO8ZLsFeEmchhR9nsu',
 };
 
 export const userSlice = createSlice({
@@ -26,5 +26,5 @@ export const userSlice = createSlice({
     },
 });
 
-export const { logoutUser } = userSlice.actions;
+export const { login, logout } = userSlice.actions;
 export default userSlice.reducer;

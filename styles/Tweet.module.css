@@ -1,11 +1,12 @@
 .tweet {
     width: 99%;
     height: 150px;
-    padding: 0 20px;
+    padding: 10px 20px;
     border-bottom: 0.5px solid #657786;
 }
 
 .user {
+    height: 20%;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -16,9 +17,25 @@
     color: #657786;
 }
 
-.icons {
+.content {
+    height: 60%;
+}
+
+.iconscontainer {
+    height: 20%;
     display: flex;
     flex-direction: row;
+    align-items: center;
+
+}
+
+.icon {
+    margin: 5px;
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: red !important;
 }
 
 /* .userravenlogo {

@@ -24,7 +24,10 @@
 .tweets {
     height: 100%;
     width: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sidebarright {
@@ -42,5 +45,5 @@
 .hashtags {
     height: 90%;
     align-items: center;
-    overflow-y: scroll;
+    overflow-y: auto;
 }

@@ -5,7 +5,25 @@ import Image from 'next/Image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faTrashCan } from '@fortawesome/free-solid-svg-icons'
 
+import { useState, useEffect } from 'react'
+
 function Tweet(props) {
+
+    const [isLiked, setIsLiked] = useState(false)
+
+    useEffect(() => {
+
+
+
+    }, [])
+
+    function handleHeartClick() {
+        console.log('Heart click')
+    }
+
+    function handleTrashClick() {
+        console.log('Trash click')
+    }
 
     return (
         <div className={styles.tweet}>
@@ -20,11 +38,11 @@ function Tweet(props) {
                 </div>
                 <p>{props.firstname} <span className={styles.username}>@{props.username}</span> - {props.date}</p>
             </div>
-            <p>{props.content}</p>
-            <div className={styles.icons}>
-                <FontAwesomeIcon icon={faHeart} />
-                <p>Like count</p>
-                <FontAwesomeIcon icon={faTrashCan} />
+            <p className={styles.content}>{props.content}</p>
+            <div className={styles.iconscontainer}>
+                <FontAwesomeIcon icon={faHeart} className={styles.icon} onClick={() => handleHeartClick()} beat />
+                <p>{props.likes}</p>
+                <FontAwesomeIcon icon={faTrashCan} className={styles.icon} onClick={() => handleTrashClick()} />
             </div>
         </div>
     )
