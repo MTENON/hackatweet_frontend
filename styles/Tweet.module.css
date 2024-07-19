@@ -16,6 +16,11 @@
     color: #657786;
 }
 
+.icons {
+    display: flex;
+    flex-direction: row;
+}
+
 /* .userravenlogo {
     width: 100%;
     margin-right: 20px;

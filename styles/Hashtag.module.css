@@ -1,0 +1,19 @@
+.hashtagcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60px;
+    width: 95%;
+    background-color: #343c4469;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+
+.hashtag {
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.tweets {
+    color: #AAB8C2;
+}

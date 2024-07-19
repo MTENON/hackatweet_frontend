@@ -19,6 +19,7 @@ function Tweetbar(props) {
         //Récupère tous les hashtags
         const hashtags = newTweet.match(pattern);
 
+
         fetch(`${link}/tweets/newTweet`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -28,9 +29,12 @@ function Tweetbar(props) {
                 hashtags: hashtags
             })
         }).then(response => response.json())
-            .then(() => { })
+            .then((data) => {
+                console.log(data)
+            })
 
         setNewTweet('')
+        console.log(hashtags)
         props.changeTrigger();
     }
 

@@ -1,6 +1,10 @@
 import styles from '../styles/Tweet.module.css'
 import Image from 'next/Image'
 
+//Import fontawesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart, faTrashCan } from '@fortawesome/free-solid-svg-icons'
+
 function Tweet(props) {
 
     return (
@@ -14,9 +18,14 @@ function Tweet(props) {
                         height={40}
                     />
                 </div>
-                <p>{props.firstname} <span className={styles.username}>@{props.username}</span> - timershit</p>
+                <p>{props.firstname} <span className={styles.username}>@{props.username}</span> - {props.date}</p>
             </div>
             <p>{props.content}</p>
+            <div className={styles.icons}>
+                <FontAwesomeIcon icon={faHeart} />
+                <p>Like count</p>
+                <FontAwesomeIcon icon={faTrashCan} />
+            </div>
         </div>
     )
 }
