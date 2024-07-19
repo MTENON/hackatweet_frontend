@@ -1,0 +1,45 @@
+.tweetbar {
+    width: 99%;
+    height: 20%;
+    padding: 0 20px;
+    border-bottom: 0.5px solid #657786;
+}
+
+.searchContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.tweetbarInput {
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    border-bottom: 0.5px solid grey;
+}
+
+.lengthAndCaw {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.text {
+    margin: 20px;
+}
+
+.cawButton {
+    height: 30px;
+    width: 80px;
+    font-weight: bold;
+    background-color: #1DA1F2;
+    border: #F5F8FA 1px solid;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.cawButton:hover {
+    background-color: #1881c2;
+}

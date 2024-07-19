@@ -8,12 +8,12 @@ function Home() {
 
   const [open, setOpen] = useState(false);
   const [confirmLoading, setConfirmLoading] = useState(false);
-  const[firstname, setFirstname] = useState('')
-  const[username, setUsername] = useState('')
-  const[password, setPassword] = useState('')
+  const [firstname, setFirstname] = useState('')
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
 
-  
-  
+
+
 
 
   const showModal = () => {
@@ -23,18 +23,18 @@ function Home() {
   const handleOk = () => {
     setConfirmLoading(true);
     fetch('http://localhost:3000/users/signup', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({ firstname: firstname, username: username, password:password }),
-		}).then(response => response.json())
-			.then(data => {
-				if (data.result) {
-					dispatch(login({ username: signInUsername, token: data.token }));
-					setFirstname('');
-					setUsername('');
-					setPassword('');
-				}
-			});
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ firstname: firstname, username: username, password: password }),
+    }).then(response => response.json())
+      .then(data => {
+        if (data.result) {
+          dispatch(login({ username: signInUsername, token: data.token }));
+          setFirstname('');
+          setUsername('');
+          setPassword('');
+        }
+      });
 
     setTimeout(() => {
       setOpen(false);
@@ -71,7 +71,7 @@ function Home() {
           >
             Sign up
           </button>
-          
+
           <Modal
             title="Basic Modal"
             open={open}
@@ -80,9 +80,9 @@ function Home() {
             onCancel={handleCancel}
           >
             <div className={styles.inputModal}>
-            <input onChange={(e) => setFirstname(e.target.value)} className= {styles.tailleinput}type="text" id= "firstname" />
-            <input onChange={(e) => setUsername(e.target.value)} className= {styles.tailleinput}type= "text" id= "Username"/>
-            <input onChange={(e) => setPassword(e.target.value)} className= {styles.tailleinput}type= "text" id= "Password"/>
+              <input onChange={(e) => setFirstname(e.target.value)} className={styles.tailleinput} type="text" id="firstname" />
+              <input onChange={(e) => setUsername(e.target.value)} className={styles.tailleinput} type="text" id="Username" />
+              <input onChange={(e) => setPassword(e.target.value)} className={styles.tailleinput} type="text" id="Password" />
             </div>
           </Modal>
 
