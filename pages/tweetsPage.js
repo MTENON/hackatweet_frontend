@@ -38,7 +38,7 @@ function tweetsPage() {
     });
 
     const hashtags = hashtagsData.map((data, i) => {
-        return <Hashtag key={i} {...data} />;
+        return <Hashtag key={i} hashtag={data.hashtag} tweets={data.tweets.length} />;
     });
 
 

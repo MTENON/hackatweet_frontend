@@ -3,7 +3,7 @@ import Image from 'next/Image'
 
 //reducers actions
 import { useSelector, useDispatch } from 'react-redux';
-import { logoutUser } from '../reducers/user';
+import { logout } from '../reducers/user';
 
 function UserSidebar() {
 
@@ -17,7 +17,7 @@ function UserSidebar() {
 
     function handleLogoutButton() {
         console.log('handleLogoutButton')
-        dispatch(logoutUser());
+        dispatch(logout());
         window.location.href = '/'
     }
 
