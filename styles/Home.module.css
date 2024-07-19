@@ -1,22 +1,77 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.leftimage {
+  height: 100%;
+  width: 40%;
+  background-image: url('../public/blue.jpg');
+  background-size: cover;
+}
+
 .main {
+  height: 100%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+  background-color: black;
+  /* display: grid; */
+  padding: 50px;
+  
+}
+
+.signup,
+.signin {
+  height: 40px;
+  width: 120px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.signup{
+  background-color: blue;
+
+}
+
+.signin{
+  background-color: black;
+  border: 0.5px solid white;
+  color: blue;
+}
+.logo{
+  height: 80px;
+  width: 80px;
+  margin-bottom: 250px;
+} 
+
+.modaltext {
+  color: black;
+}
+
+.inputModal{
+  
+  
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  min-height: 100vh;
-  padding: 4rem 0;
 }
 
-.title {
-  line-height: 1.15;
-  font-size: 4rem;
-}
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
 
-.title a:hover, .title a:focus, .title a:active {
-  text-decoration: underline;
+
+.tailleinput{
+  height: 60%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  color : black
+  
+  
 }
